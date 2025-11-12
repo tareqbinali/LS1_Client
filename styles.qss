@@ -1,0 +1,292 @@
+/* Global Widget Style */
+
+/*
+QMainWindow {
+    background-color:rgb(230, 167, 167);
+    color: white;
+}
+
+QWidget {
+    background-color:dark;
+    color: white;
+    font-family: "Segoe UI", "Arial", sans-serif;
+    font-size: 14px;
+}
+*/
+
+/* QPushButton - Modern, sleek buttons */
+/* Default Button Style - 3D effect */
+QPushButton {
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, 
+                                stop:0 #B0E0E6, stop:1 #87CEEB); /* Skyblue gradient */
+    color: black;
+    border: 2px solid #1E3A8A;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    
+
+    /* Button size */
+    width: 70px;      /* Fixed width */
+    height: 18px;      /* Fixed height */
+
+}
+
+/* Hover effect - Slightly brighter */
+QPushButton:hover {
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, 
+                                stop:0 #ADD8E6, stop:1 #87CEFA); /* Lighter sky blue */
+    border: 2px solid #102C6B; /* Slightly darker border */
+}
+
+/* Pressed Effect - Simulated Depth */
+QPushButton:pressed {
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, 
+                                stop:0 #1565C0, stop:1 #0D47A1);  /* Darker blue on press */
+    border: 2px solid #0D47A1;
+    padding-top: 10px; /* Moves text down slightly */
+    padding-bottom: 6px;
+}
+
+/* Disabled button style */
+QPushButton:disabled {
+    background: #A9A9A9;
+    color: #666666;
+    border: 2px solid #666666;
+}
+
+
+
+/* QTextEdit - For text input with focus effect */
+QTextEdit, QLineEdit {
+    background-color:rgb(162, 235, 25);
+    color:rgb(22, 21, 21);
+    border: 1px solid #3B82F6;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+QTextEdit:focus, QLineEdit:focus {
+    border: 1px solid #4A90E2;
+    background-color:rgb(102, 255, 0);
+}
+
+
+/* QTablewidget*/
+QTableWidget {
+    background-color: black;  /* Default background */
+    color: white;
+    border: 1px solid #3B82F6;
+    alternate-background-color: #444444;  /* Dark gray for alternate rows */
+}
+
+QTableWidget::item {
+    background-color: #888888;  /* Light gray for default rows */
+    color: black;
+}
+
+/* Alternate row color */
+QTableWidget::item:alternate {
+    background-color: #444444;  /* Dark gray */
+    color: white;
+}
+
+/* Selected item */
+QTableWidget::item:selected {
+    background-color: #4A90E2;
+    color: white;
+}
+
+/* Header styling */
+QTableWidget QHeaderView::section {
+    background-color: #222222;
+    color: white;
+    padding: 5px;
+    border: 1px solid rgb(0,100,0);
+    font-weight: bold;
+}
+
+
+
+
+/* QListWidget - List view with highlighted selected item */
+QListWidget {
+    background-color: #1E1E1E;
+    color: #E0E0E0;
+    border: 1px solid #3B82F6;
+}
+
+QListWidget::item:selected {
+    background-color: #4A90E2;
+    color: white;
+}
+
+/* QGroupBox - Stylish group boxes with blue borders */
+QGroupBox {
+    background-color:rgb(0, 100, 0); 
+    color:white; 
+    font-size:18px; 
+    font-weight:bold; 
+    border:2px solid rgb(56, 97, 125); 
+    border-radius: 2px;
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 rgb(58, 149, 177), stop: 1 rgb(100, 36, 36));
+}
+
+QGroupBox:title {
+    color: #E0E0E0;
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+    padding: 0 5px;
+    font-weight: bold;
+}
+
+/* QComboBox - Stylish dropdown with blue highlight */
+QComboBox {
+    background-color: #2E2E2E;
+    color: #E0E0E0;
+    border: 1px solid #3B82F6;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+QComboBox:editable {
+    background-color: #333333;
+}
+
+QComboBox:hover {
+    border-color: #4A90E2;
+}
+
+/* QScrollArea - Dark scroll area with hidden border 
+QScrollArea {
+    background-color: #1E1E1E;
+    border: none;
+}
+*/
+
+/* QScrollArea - Dark scroll area with visible border */
+QScrollArea {
+    background-color: #1E1E1E;  /* Dark background */
+    border: 2px solid #3B82F6;  /* Blue border for visibility */
+    border-radius: 6px;  /* Optional: Rounded corners */
+    padding: 5px;  /* Add spacing inside the border */
+}
+
+/* QRadioButton - Neatly styled radio buttons */
+QRadioButton {
+    color: #E0E0E0;
+    padding: 5px;
+}
+
+QRadioButton::indicator {
+    border: 2px solid #3B82F6;
+    border-radius: 6px;
+    width: 18px;
+    height: 18px;
+}
+
+QRadioButton::indicator:checked {
+    background-color: #4A90E2;
+}
+
+/* QStackedLayout - Tab-like transitions (Optional, add if using) */
+QStackedLayout {
+    background-color: #2E2E2E;
+    border: none;
+}
+
+/* QGraphicsView - For custom views like images */
+QGraphicsView {
+    background-color: #2B2B2B;
+    border: 1px solid #444444;
+}
+
+/* QCalendarWidget - Light calendar with dark theme */
+QCalendarWidget {
+    background-color:rgb(46, 46, 46);
+    color: #E0E0E0;
+    border: 1px solid #3B82F6;
+}
+
+QCalendarWidget QAbstractItemView {
+    background-color:rgb(29, 202, 179);
+    border: none;
+}
+
+QCalendarWidget QAbstractItemView::item:selected {
+    background-color:rgba(74, 145, 226, 0.25);
+    color: black;
+}
+
+/* Style the menu bar */
+QMenuBar {
+    background-color: #0078d7;  /* A deep blue color */
+    color: white;  /* Text color */
+    font-size: 14px;
+}
+
+/* Style menu bar items */
+QMenuBar::item {
+    background-color: transparent;
+    color: white;
+    padding: 5px 10px;
+}
+QMenuBar::item:disabled {
+    background-color: #d3d3d3;  /* Gray background */
+    color: #a9a9a9;             /* Gray text */
+}
+
+/* Highlight when hovered */
+QMenuBar::item:selected {
+    background-color: #005a9e;  /* Slightly darker blue */
+}
+
+/* Style dropdown menus */
+QMenu {
+    background-color: #0078d7;
+    border: 1px solid #005a9e;
+    color: white;
+}
+
+/* Style menu items */
+QMenu::item {
+    background-color: transparent;
+    padding: 5px 20px;
+}
+QMenu::item:disabled {
+    background-color: #d3d3d3;  /* Gray background */
+    color: #a9a9a9;             /* Gray text */
+}
+
+/* Highlight menu items when hovered */
+QMenu::item:selected {
+    background-color: #005a9e;
+}
+
+
+/* Base style for the progress bar */
+QProgressBar {
+    border: 2px solid #3B82F6; /* Blue border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #222222; /* Dark background */
+    text-align: center; /* Center the percentage text */
+    color: red; /* Text color */
+    height: 15px; /* Adjust height */
+}
+
+/* The actual progress indicator */
+QProgressBar::chunk {
+    background-color:rgb(59, 246, 106); /* Blue progress color */
+    width: 10px; /* Chunk width for smooth animation */
+    /* border-radius: 5px;  Rounded corners for progress */
+}
+
+
+/* QToolBar mainly to hid the vertical line created by the seperator */
+QToolBar::separator {
+    width: 10px;  /* Make it have no width */
+    background: transparent;  /* Set the background to transparent */
+    border: none;  /* Remove any borders */
+}
