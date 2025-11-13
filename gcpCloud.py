@@ -16,10 +16,11 @@ import re
 
 import logging
 
+from constants import service_file
 
-meipass_path = sys._MEIPASS if getattr(sys, 'frozen', False) else os.path.abspath(".")
-ServiceFile = os.path.join(meipass_path, "ls1-sample.json")
-os.environ['GOOGLE_APPLICATION_CREDENTIALS']=ServiceFile
+# meipass_path = sys._MEIPASS if getattr(sys, 'frozen', False) else os.path.abspath(".")
+# service_file = os.path.join(meipass_path, "ls1-sample.json")
+os.environ['GOOGLE_APPLICATION_CREDENTIALS']=service_file
 
 
 STORAGE_CLASSES=('STANDARD', 'NEARLINE', 'COLDLINE', 'ARCHIVE')

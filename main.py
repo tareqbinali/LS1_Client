@@ -96,7 +96,7 @@ import configparser
 import time
 import io
 
-from PIL import Image
+from PIL import Image #Pillow
 # import wave
 # import array
 
