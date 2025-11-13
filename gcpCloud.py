@@ -16,7 +16,11 @@ import re
 
 import logging
 
-from constants import service_file
+from constants import service_file, client_cert_file
+
+logging.info(
+    f"Using client_cert_file={client_cert_file}, exists={os.path.exists(client_cert_file)}"
+)
 
 # meipass_path = sys._MEIPASS if getattr(sys, 'frozen', False) else os.path.abspath(".")
 # service_file = os.path.join(meipass_path, "ls1-sample.json")

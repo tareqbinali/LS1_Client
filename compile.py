@@ -1,5 +1,8 @@
-#  last update 09 Mar 2025
+#  last update 13 Nov 2025
 # working fine so far.
+
+# requried librarys: PyInstaller, PySide6
+
 
 # import PyInstaller.__main__
 # from PyInstaller.utils.hooks import get_package_paths
@@ -80,29 +83,30 @@ if ok_pressed:
     update_version_file(version_file, version_no,new_version, release_date)
 
 
-    command=[
+    command = [
         "pyinstaller",
         "main.py",
         '--name', f"{app_name}_{new_version}",
         '--noconfirm',
         '--onefile',
         '--windowed',
-        '--icon',
-        "logo.ico",
-        '--splash',
-        "splash.png",
-        '--add-data',
-        "ls1-sample.json;.",
-        '--add-data',"client-cert.pem;.",
-        '--add-data',"client-key.pem;.",
-        '--add-data',"icon.png;.",
-        '--add-data',"styles.qss;.",
-        '--add-data',"refresh.png;.",
+        '--icon', "logo.ico",
+        '--splash', "splash.png",
+
+        # 👇 Put all secrets inside a .secrets folder in the bundle
+        '--add-data', ".secrets/ls1-sample.json;.secrets",
+        '--add-data', ".secrets/client-cert.pem;.secrets",
+        '--add-data', ".secrets/client-key.pem;.secrets",
+
+        '--add-data', "icon.png;.",
+        '--add-data', "styles.qss;.",
+        '--add-data', "refresh.png;.",
         '--clean',
-        '--debug', 'all',  # Enable debug mode
+        '--debug', 'all',
         '--workpath', work_path,
         '--distpath', dist_path,
     ]
+
 
     # Open the log file in write mode
     with open(log_file, 'w') as log:
